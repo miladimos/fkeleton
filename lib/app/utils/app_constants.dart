@@ -5,5 +5,5 @@ class AppConstants {
   static Color primarySwatch = const Color(0x11111111);
   static Color primaryDarkColor = const Color(0x11111111);
   static Color topBarColor = const Color(0xfffafafa);
-  static String applicationTitle = 'Application';
+  static String applicationTitle = 'Fkeleton';
 }

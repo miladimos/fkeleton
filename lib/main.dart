@@ -6,7 +6,7 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
 
   GlobalErrorHandler(
-    child: Application()
+    child: const Application()
   );
 }
 
