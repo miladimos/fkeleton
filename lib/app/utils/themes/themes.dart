@@ -9,5 +9,5 @@ class Themes {
   static final darkTheme = ThemeData(
     colorScheme: const ColorScheme.dark(),
   );
-  
+
 }
