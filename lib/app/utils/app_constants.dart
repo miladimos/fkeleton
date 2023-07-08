@@ -7,3 +7,7 @@ class AppConstants {
   static Color topBarColor = const Color(0xfffafafa);
   static String applicationTitle = 'Fkeleton';
 }
+
+class ApiEndpoints {
+  static String baseUrl = '';
+}

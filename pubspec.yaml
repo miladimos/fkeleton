@@ -1,5 +1,5 @@
 name: fkeleton
-description: A new Flutter project.
+description: A Fkeleton flutter project.
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -26,6 +26,10 @@ dependencies:
   shared_preferences:
   platform_device_id:
   shimmer:
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
 
 
   cupertino_icons: ^1.0.2

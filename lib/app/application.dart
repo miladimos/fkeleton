@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:fkeleton/app/utils/app_routes.dart';
 import 'package:fkeleton/app/utils/translations/messages.dart';
 import 'package:fkeleton/app/utils/app_constants.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 class Application extends StatefulWidget {
   const Application({Key? key}) : super(key: key);
@@ -15,7 +15,6 @@ class Application extends StatefulWidget {
 }
 
 class _ApplicationState extends State<Application> {
-
   ThemeController themeController = Get.put(ThemeController());
 
   @override
@@ -24,8 +23,17 @@ class _ApplicationState extends State<Application> {
       debugShowCheckedModeBanner: false,
       title: AppConstants.applicationTitle,
       translations: Messages(),
-      locale: const Locale('fa', 'IR') ,
+      locale: const Locale('fa', 'IR'),
       fallbackLocale: const Locale('en', 'US'),
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: const [
+        Locale("fa"),
+        Locale("en"),
+      ],
       themeMode: themeController.theme,
       theme: Themes.lightTheme,
       darkTheme: Themes.darkTheme,
