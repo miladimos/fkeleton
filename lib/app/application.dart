@@ -6,6 +6,7 @@ import 'package:fkeleton/app/utils/app_routes.dart';
 import 'package:fkeleton/app/utils/translations/messages.dart';
 import 'package:fkeleton/app/utils/app_constants.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:device_preview/device_preview.dart';
 
 class Application extends StatefulWidget {
   const Application({Key? key}) : super(key: key);
@@ -20,10 +21,12 @@ class _ApplicationState extends State<Application> {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      useInheritedMediaQuery: true,
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       title: AppConstants.applicationTitle,
       translations: Messages(),
-      locale: const Locale('fa', 'IR'),
       fallbackLocale: const Locale('en', 'US'),
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,

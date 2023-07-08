@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'mixins/app_logger.dart';
+import 'package:device_preview/device_preview.dart';
 
 class GlobalErrorHandler with AppLogger {
   GlobalErrorHandler({required Widget child}) {
@@ -14,7 +15,10 @@ class GlobalErrorHandler with AppLogger {
     runZonedGuarded(() {
       WidgetsFlutterBinding.ensureInitialized();
 
-      runApp(child);
+      runApp(DevicePreview(
+        enabled: !kReleaseMode,
+        builder: (context) => child,
+      ));
     }, (error, stack) {});
   }
 

@@ -29,7 +29,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
-
+  device_preview: 
 
 
   cupertino_icons: ^1.0.2
