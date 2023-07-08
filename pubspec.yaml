@@ -16,6 +16,7 @@ dependencies:
     sdk: flutter
 
   get:
+  get_it: 
   get_storage:
   logging:
   url_launcher:
@@ -23,8 +24,7 @@ dependencies:
   dio: 
   permission_handler:
   connectivity_plus:
-  shared_preferences:
-  platform_device_id:
+  shared_preferences:  
   shimmer:
   flutter_localizations:
     sdk: flutter

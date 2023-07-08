@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:app/app/utils/app_constants.dart';
+import 'package:fkeleton/app/utils/app_constants.dart';
 
 class HttpService {
   late Dio _dio;
@@ -7,8 +7,8 @@ class HttpService {
   HttpService() {
     _dio = Dio(
       BaseOptions(
-        baseUrl: ApiConstants.baseUrl,
-        headers: ApiConstants.headers,
+        baseUrl: ApiEndpoints.baseUrl,
+        // headers: AppConstants.headers,
       ),
     );
 

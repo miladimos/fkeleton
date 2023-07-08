@@ -1,11 +1,9 @@
 import 'dart:async';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import 'mixins/app_logger.dart';
 
-class GlobalErrorHandler  with AppLogger{
+class GlobalErrorHandler with AppLogger {
   GlobalErrorHandler({required Widget child}) {
     if (kReleaseMode) {
       ErrorWidget.builder = (_) => const SizedBox();
@@ -14,6 +12,8 @@ class GlobalErrorHandler  with AppLogger{
     FlutterError.onError = _handleFlutterError;
 
     runZonedGuarded(() {
+      WidgetsFlutterBinding.ensureInitialized();
+
       runApp(child);
     }, (error, stack) {});
   }
