@@ -1,3 +1,4 @@
+import 'package:fkeleton/app/utils/helpers.dart';
 import 'package:fkeleton/app/utils/translations/translation_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,16 +9,23 @@ class HomePage extends GetView<HomePageController> {
 
   @override
   Widget build(BuildContext context) {
-    
-    return Scaffold(
-      body: Container(
-        child: Center(
-          child: Column(
-            children: [
-              Text('hello'.tr),
-              Obx(() => Text("current value : ${controller.currentValue.value}"),),
-              ElevatedButton(onPressed: () => controller.increment(), child: const Text("Increment"))
-            ],
+    return WillPopScope(
+      onWillPop: null,
+      child: Scaffold(
+        body: Container(
+          child: Center(
+            child: Column(
+              children: [
+                Text('hello'.tr),
+                Obx(
+                  () =>
+                      Text("current value : ${controller.currentValue.value}"),
+                ),
+                ElevatedButton(
+                    onPressed: () => controller.increment(),
+                    child: const Text("Increment"))
+              ],
+            ),
           ),
         ),
       ),
