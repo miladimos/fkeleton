@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 
 class Helpers {
   static Future navigateToPage(BuildContext context, page) async {
-    return await Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => page));
+    return await Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => page),
+    );
   }
 
   static Future navigateToPageRoute(BuildContext context, routeName) async {
@@ -32,13 +33,14 @@ class Helpers {
         false;
   }
 
-  // Future handleDoubleClickToExit() async {
-  //   var ctime;
+  // static Future<bool> handleDoubleClickToExit() async {
+  //   var currentTime;
 
   //   DateTime now = DateTime.now();
-  //   if (ctime == null || now.difference(ctime) > Duration(seconds: 2)) {
+  //   if (currentTime == null ||
+  //       now.difference(currentTime) > Duration(seconds: 2)) {
   //     //add duration of press gap
-  //     ctime = now;
+  //     currentTime = now;
   //     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
   //         content: Text(
   //             'Press Back Button Again to Exit'))); //scaffold message, you can show Toast message too.

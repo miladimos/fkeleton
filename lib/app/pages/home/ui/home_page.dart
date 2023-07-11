@@ -11,20 +11,21 @@ class HomePage extends GetView<HomePageController> {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: null,
-      child: Scaffold(
-        body: Container(
-          child: Center(
-            child: Column(
-              children: [
-                Text('hello'.tr),
-                Obx(
-                  () =>
-                      Text("current value : ${controller.currentValue.value}"),
-                ),
-                ElevatedButton(
-                    onPressed: () => controller.increment(),
-                    child: const Text("Increment"))
-              ],
+      child: SafeArea(
+        child: Scaffold(
+          body: Container(
+            child: Center(
+              child: Column(
+                children: [
+                  Obx(
+                    () => Text(
+                        "current value : ${controller.currentValue.value}"),
+                  ),
+                  ElevatedButton(
+                      onPressed: () => controller.increment(),
+                      child: const Text("Increment"))
+                ],
+              ),
             ),
           ),
         ),
