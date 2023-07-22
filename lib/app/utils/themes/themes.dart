@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Themes {
-
   static final lightTheme = ThemeData(
     colorScheme: const ColorScheme.light(),
   );
@@ -9,5 +8,4 @@ class Themes {
   static final darkTheme = ThemeData(
     colorScheme: const ColorScheme.dark(),
   );
-
 }

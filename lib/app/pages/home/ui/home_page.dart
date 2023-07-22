@@ -14,9 +14,11 @@ class HomePage extends GetView<HomePageController> {
       child: SafeArea(
         child: Scaffold(
           body: Container(
+            margin: EdgeInsets.only(top: 50),
             child: Center(
               child: Column(
                 children: [
+                  Text("hello".tr),
                   Obx(
                     () => Text(
                         "current value : ${controller.currentValue.value}"),

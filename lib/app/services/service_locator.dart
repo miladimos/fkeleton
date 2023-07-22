@@ -10,7 +10,7 @@ Future<void> setupIoCContainer() async {
   serviceLocator
       .registerLazySingleton<NavigatorService>(() => NavigatorService());
 
-  // await Get.putAsync(() => Service().init());
+  // await Get.putAsync(() => Service().init()); // getx services
 
   debugPrint("all services started ...");
 }

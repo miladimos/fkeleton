@@ -23,6 +23,7 @@ class _ApplicationState extends State<Application> {
     return GetMaterialApp(
       useInheritedMediaQuery: true,
       locale: DevicePreview.locale(context),
+      // locale: Locale("fa", "fa-IR"),
       builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
       title: AppConstants.applicationTitle,
